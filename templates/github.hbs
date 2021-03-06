@@ -1,0 +1,35 @@
+<div class="{{ config.container.class_prefix}} {{class1}}">
+    <div class="{{ config.container.class_prefix}} {{class2}}">
+        {{#if config.container.add_header}}
+            <div class="{{ config.container.class_prefix}} {{config.container.header.class}}">
+                {{#if config.container.header.add_dots}}
+                <div class="{{ config.container.class_prefix}} {{config.container.header.dots.class}}">
+                {{#each config.container.header.dots.count}}
+                    <div></div>
+                {{/each}}
+                </div>
+                {{/if}}
+
+                {{#if config.container.header.add_title}}
+                <div class="{{ config.container.class_prefix }} {{config.container.header.title.class}}">
+                    <a rel="noopener noreferrer" target="_blank"
+                       href="{{data.link}}">
+                        {{data.link}}
+                    </a>
+                </div>
+                {{/if}}
+
+            </div>
+        {{/if}}
+
+        <div class="{{ config.container.class_prefix }} {{config.container.code.class}}">
+            <div>
+                <pre class="language-{{data.language}}">
+                    <code class="language-{{data.language}}">
+                        {{{ data.content }}}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
