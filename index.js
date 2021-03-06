@@ -68,7 +68,7 @@ function externalPreview(options) {
     }
 
     function preview(url, type, service) {
-        const previewTemplate = fs.readFileSync(path.resolve(`./templates/${service}.hbs`), 'utf8');
+        const previewTemplate = fs.readFileSync(path.resolve(__dirname + `/templates/${service}.hbs`), 'utf8');
         const template = handlebars.compile(previewTemplate);
         if (!settings.data.language) {
             settings.data.language = getLanguage(url);
