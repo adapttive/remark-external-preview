@@ -97,7 +97,7 @@ function externalPreview(options) {
         // replace url for github
         let link = url;
         if (service === "github" && settings['config'][service]['replacement_host']) {
-            link = url.replace(/\/blob\/(.*?)\//, '/');
+            link = url; //url.replace(/\/blob\/(.*?)\//, '/');
             url = url.replace(/\/\/github\.com/, '//' + settings['config'][service]['replacement_host']).replace(/\/blob\//, '/');
         }
         settings.data.link = link;

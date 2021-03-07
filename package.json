@@ -1,6 +1,6 @@
 {
   "name": "@adapttive/remark-external-preview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "External Preview Plugin for Remark",
   "keywords": [
     "unified",
