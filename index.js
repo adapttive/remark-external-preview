@@ -17,7 +17,7 @@ const DEFAULT_SETTINGS = {
             class2: "frame",
             add_header: true,
             header: {
-                class: "header flex hide-for-small",
+                class: "header flex",
                 add_dots: true,
                 dots: {
                     class: "buttons",
@@ -108,6 +108,7 @@ function externalPreview(options) {
         if (typeof content !== "string" && buffer.Buffer.isBuffer(content)) {
             content = content.toString();
         }
+        content = content.trim();
 
         if (type === 'code') {
             let language = settings.data.type ? options.data.type : getLanguage(link);
@@ -132,8 +133,7 @@ function externalPreview(options) {
         return {content: content, link: link};
     }
 
-    function extract(url, content)
-    {
+    function extract(url, content) {
         if (typeof content === "string") {
             const lines = EXTERNAL_PREVIEW_LINE_NUMBER_REGEX.exec(url);
             let start, end;
