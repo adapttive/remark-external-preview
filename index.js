@@ -13,7 +13,7 @@ const DEFAULT_SETTINGS = {
     config: {
         container: {
             class_prefix: "external-preview",
-            class1: "flex flex-align-top",
+            class1: "flex flex-align-top container",
             class2: "frame",
             add_header: true,
             header: {
@@ -114,6 +114,14 @@ function externalPreview(options) {
             let language = settings.data.type ? options.data.type : getLanguage(link);
             if (settings.config.container.code.use_prism && bn.isNode) {
                 const Prism = require('prismjs');
+
+                require("prismjs/plugins/normalize-whitespace/prism-normalize-whitespace");
+                Prism.plugins.NormalizeWhitespace.setDefaults({
+                    'remove-trailing': true,
+                    'remove-indent': true,
+                    'left-trim': true,
+                    'right-trim': true,
+                });
 
                 // load all grammars
                 require("prismjs/components/")();
