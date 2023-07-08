@@ -24,7 +24,7 @@
     "handlebars": "^4.7.7",
     "prismjs": "^1.23.0",
     "sync-request": "^6.1.0",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "remark": "^13.0.0",
