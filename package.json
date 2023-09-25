@@ -29,7 +29,7 @@
   "devDependencies": {
     "remark": "^13.0.0",
     "remark-cli": "^9.0.0",
-    "remark-html": "^13.0.1",
+    "remark-html": "^16.0.0",
     "remark-prism": "^1.3.4"
   }
 }
